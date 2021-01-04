@@ -1,13 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const FaqSection = () => {
 	return (
 		<div className='faq'>
 			<div className="faq__title">
-				<h2>
+				<h3>
 					Any question?
 					<span>FAQ</span>
-				</h2>
+				</h3>
 			</div>
 			<div className="faq__question question">
 				<h4>How do I start?</h4>
@@ -40,5 +41,6 @@ const FaqSection = () => {
 		</div>
 	)
 }
+
 
 export default FaqSection;

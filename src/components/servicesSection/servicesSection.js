@@ -14,7 +14,7 @@ const ServicesSection = () => {
 			</div>
 			<div className="services__descr descr">
 				<div className="descr__title">
-					<h2>High quality service.</h2>
+					<h3>High <span>quality</span> service.</h3>
 				</div>
 				<div className="sescr__cards">
 					<div className="card">
