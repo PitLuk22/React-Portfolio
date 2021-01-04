@@ -1,11 +1,12 @@
 import React from 'react'
-import AboutUs from '../aboutUs';
-
+import AboutSection from '../aboutSection';
+import ServicesSection from '../servicesSection';
 const AboutPage = () => {
 	return (
-		<div>
-			<AboutUs />
-		</div>
+		<>
+			<AboutSection />
+			<ServicesSection />
+		</>
 	)
 }
 
