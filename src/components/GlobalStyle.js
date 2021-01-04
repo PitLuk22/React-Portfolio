@@ -8,6 +8,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 	body {
 		background: #1b1b1b;
+		font-family: 'Inter', sans-serif;
+		/* font-family: 'Lobster', cursive; */
 	}
 	button {
 		position: relative;
@@ -22,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 		transition: all .5s ease;
 		&:hover {
 			background-color: #23d997;
-			color: #000;
+			color: #242424;
 		}
 		b {
 			position: relative;
@@ -41,18 +43,16 @@ const GlobalStyle = createGlobalStyle`
 	}
 	h1,h2 {
 		font-weight: bold;
-		font-size: 4rem;
+		font-size: 3.5rem;
 		color: #fff;
 	}
 	h3 {
 		font-weight: lighter;
 		color: #fff;
-		font-size: 3rem;
 	}
 	h4 {
 		font-weight: bold;
 		color: #fff;
-		font-size: 3rem;
 	}
 	p {
 		padding: 3rem 0rem;

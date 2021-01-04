@@ -5,49 +5,51 @@ import clock from '../../img/clock.svg';
 import diaphragm from '../../img/diaphragm.svg';
 import money from '../../img/money.svg';
 import teamwork from '../../img/teamwork.svg';
+// Styles
+import * as S from './style';
 
 const ServicesSection = () => {
 	return (
-		<div className='services'>
-			<div className="services__img">
-				<img src={servicesImg} alt="services img" />
-			</div>
-			<div className="services__descr descr">
+		<S.Service>
+			<S.Image>
+				<img src={servicesImg} alt="services" />
+			</S.Image>
+			<S.Description>
 				<div className="descr__title">
-					<h3>High <span>quality</span> service.</h3>
+					<h2>High <span>quality</span> service.</h2>
 				</div>
-				<div className="sescr__cards">
-					<div className="card">
+				<S.Cards>
+					<S.Card>
 						<div className="card__img">
 							<img src={clock} alt="icon" />
-							<div className='card__title'>Efficient</div>
+							<h3 className='card__title'>Efficient</h3>
 						</div>
 						<p className='card__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-					<div className="card">
+					</S.Card>
+					<S.Card>
 						<div className="card__img">
 							<img src={diaphragm} alt="icon" />
-							<div className='card__title'>Affordable</div>
+							<h3 className='card__title'>Affordable</h3>
 						</div>
 						<p className='card__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-					<div className="card">
+					</S.Card>
+					<S.Card>
 						<div className="card__img">
 							<img src={money} alt="icon" />
-							<div className='card__title'>Pro Grade Gear</div>
+							<h3 className='card__title'>Pro Grade Gear</h3>
 						</div>
 						<p className='card__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-					<div className="card">
+					</S.Card>
+					<S.Card>
 						<div className="card__img">
 							<img src={teamwork} alt="icon" />
-							<div className='card__title'>Teamwork</div>
+							<h3 className='card__title'>Teamwork</h3>
 						</div>
 						<p className='card__text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+					</S.Card>
+				</S.Cards>
+			</S.Description>
+		</S.Service>
 	)
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 // Import img
 import home from '../../img/home1.png';
-
+// Styles
+import * as S from './style';
 
 const aboutSection = () => {
 
@@ -44,38 +44,10 @@ const aboutSection = () => {
 				</button>
 			</S.Descr>
 			<S.Image>
-				<img src={home} alt="a man" />
+				<img src={home} alt="home" />
 			</S.Image>
 		</S.About>
 	)
 }
-
-// Styled components
-const S = {};
-
-S.About = styled.div`
-	min-height: 90vh;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 5rem 10rem;
-	color: #fff;
-`;
-S.Descr = styled.div`
-	padding-right: 5rem;
-`;
-S.Image = styled.div`
-	flex: 1;
-	overflow: hidden;
-	img {
-		width: 100%;
-		height: 80vh;
-		object-fit: cover;
-	}
-`;
-S.Hide = styled.div`
-	overflow: hidden;
-`;
-
 
 export default aboutSection;
