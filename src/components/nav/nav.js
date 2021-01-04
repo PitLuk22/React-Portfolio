@@ -1,20 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // Styles
 import * as S from './style';
 
 const Nav = () => {
 	return (
 		<S.Nav>
-			<S.Logo>Portfolio</S.Logo>
+			<Link to="/about">
+				<S.Logo>Portfolio</S.Logo>
+			</Link>
 			<ul>
 				<li>
-					<a href="#1">About Us</a>
+					<Link to="/about">About Us</Link>
 				</li>
 				<li>
-					<a href="#2">Our Works</a>
+					<Link to="/works">Our Works</Link>
 				</li>
 				<li>
-					<a href="#3">Contacts</a>
+					<Link to="/contacts">Contacts</Link>
 				</li>
 			</ul>
 		</S.Nav>

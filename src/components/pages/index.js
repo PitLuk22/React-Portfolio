@@ -1,2 +1,9 @@
 import AboutPage from './aboutPage';
-export { AboutPage };
+import WorksPage from './worksPage';
+import ContactsPage from './contactsPage';
+
+export {
+	AboutPage,
+	WorksPage,
+	ContactsPage
+};

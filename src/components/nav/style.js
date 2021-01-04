@@ -10,6 +10,9 @@ export const Nav = styled.nav`
 	align-items: center;
 	color: #fff;
 	padding: 0 10rem;
+	a {
+		text-decoration: none;
+	}
 	ul {
 		display: flex;
 		list-style:none;
@@ -21,15 +24,16 @@ export const Nav = styled.nav`
 				text-decoration: none;
 				color: #fff;
 				transition: all .3s ease;
-			&:hover {
-				color: ${mainColor}; 
-			}
+				&:hover {
+					color: ${mainColor}; 
+				}
 			}
 		}
 		li:last-child {
 			padding-right: 0;
 		}
 	}
+	
 `;
 
 export const Logo = styled.h1`
