@@ -1,30 +1,31 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const mainColor = '#23d997';
+
+export const GlobalStyle = createGlobalStyle`
 	*{
 		margin:0;
 		padding:0;
 		box-sizing:border-box;
 	}
 	body {
-		background: #1b1b1b;
+		background: #1A2026;
 		font-family: 'Inter', sans-serif;
-		/* font-family: 'Lobster', cursive; */
 	}
 	button {
 		position: relative;
 		overflow: hidden;
 		font-weight: bold;
 		font-size: 1.1rem;
-		border: 3px solid #23d997;
+		border: 3px solid ${mainColor};
 		color: #fff;
 		cursor: pointer;
 		padding: 1rem 2rem;
 		background: transparent;
 		transition: all .5s ease;
 		&:hover {
-			background-color: #23d997;
-			color: #242424;
+			background-color: ${mainColor};
+			color: #3c3c3c;
 		}
 		b {
 			position: relative;
@@ -61,7 +62,7 @@ const GlobalStyle = createGlobalStyle`
 		color: #ccc;
 	}
 	span {
-		color: #23d997;
+		color: ${mainColor};
 	}
 	a {
 		font-size: 1.1rem;
@@ -84,5 +85,3 @@ const GlobalStyle = createGlobalStyle`
 }
 
 `;
-
-export default GlobalStyle;

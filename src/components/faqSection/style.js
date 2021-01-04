@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { About } from '../aboutSection/style';
 
 export const Faq = styled(About)`
+	padding-top:0 ;
 	display: block;
 	.faq__title {
 		padding-bottom: 2rem;
