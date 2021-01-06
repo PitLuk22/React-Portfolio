@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { GlobalStyle } from '../GlobalStyle';
 // Import Components
 import { AboutPage, WorksPage, ContactsPage } from '../pages';
-import Nav from '../nav';;
+import Nav from '../nav';
+import WorkDetails from '../workDetails';
 
 function App() {
 	return (
@@ -13,8 +14,14 @@ function App() {
 				<GlobalStyle />
 				<Nav />
 				<Switch>
-					<Route path='/about' component={AboutPage} />
-					<Route path='/works' component={WorksPage} />
+					<Route path='/' exact component={AboutPage} />
+					<Route path='/work' exact component={WorksPage} />
+					<Route path='/work/:id' render={
+						({ match }) => {
+							const url = match.url;
+							return <WorkDetails url={url} />;
+						}
+					} />
 					<Route path='/contacts' component={ContactsPage} />
 				</Switch>
 			</div>

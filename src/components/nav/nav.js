@@ -6,15 +6,15 @@ import * as S from './style';
 const Nav = () => {
 	return (
 		<S.Nav>
-			<Link to="/about">
+			<Link to="/">
 				<S.Logo>Portfolio</S.Logo>
 			</Link>
 			<ul>
 				<li>
-					<Link to="/about">About Us</Link>
+					<Link to="/">About</Link>
 				</li>
 				<li>
-					<Link to="/works">Our Works</Link>
+					<Link to="/work">Works</Link>
 				</li>
 				<li>
 					<Link to="/contacts">Contacts</Link>

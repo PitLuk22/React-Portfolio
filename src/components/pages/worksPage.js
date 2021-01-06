@@ -1,11 +1,7 @@
 import React from 'react'
-
+import Works from '../works';
 const WorksPage = () => {
-	return (
-		<>
-			<h1>Works</h1>
-		</>
-	)
+	return <Works />;
 }
 
 export default WorksPage;

@@ -66,6 +66,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	a {
 		font-size: 1.1rem;
+		text-decoration: none;
 	}
 
 
