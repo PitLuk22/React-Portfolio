@@ -8,9 +8,9 @@ export const ProjectContainer = styled.div`
 export const HeadLine = styled.div`
 	h2 {
 		position: absolute;
-		bottom: 30%;
+		bottom: 40%;
 		left: 50%;
-		transform: translate(-50%, -30%);
+		transform: translate(-50%, -40%);
 		z-index: 2;
 		font-size: 5rem;
 		text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);	}

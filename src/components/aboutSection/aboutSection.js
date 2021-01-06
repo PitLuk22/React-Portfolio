@@ -3,6 +3,8 @@ import React from 'react';
 import home from '../../img/home1.png';
 // Styles
 import * as S from './style';
+// Animation
+import { motion } from 'framer-motion';
 
 const aboutSection = () => {
 
@@ -18,25 +20,36 @@ const aboutSection = () => {
 		}, 600);
 	}
 
+	const container = {
+		hidden: {},
+		show: { transition: { duration: 1, staggerChildren: 0.4 } }
+	}
+
+	const title = {
+		hidden: { opacity: 0, x: 100 },
+		show: { opacity: 1, x: 0 }
+	}
+
+
 	return (
 		<S.About>
 			<S.Descr>
-				<div className="about__title title">
+				<motion.div variants={container} initial='hidden' animate='show'>
 					<S.Hide>
-						<h2>We work to make</h2>
+						<motion.h2 variants={title}>We work to make</motion.h2>
 					</S.Hide>
 					<S.Hide>
-						<h2>your <span>dreams</span> come</h2>
+						<motion.h2 variants={title}>your <span>dreams</span> come</motion.h2>
 					</S.Hide>
 					<S.Hide>
-						<h2>true.</h2>
+						<motion.h2 variants={title}>true.</motion.h2>
 					</S.Hide>
-					<p className='subtitle'>
+					<p>
 						Contact us for any website or photography ideas that you have.
 						<br />
 						We have professionals with amazing skills to help you achieve it.
 					</p>
-				</div>
+				</motion.div>
 				<button
 					onClick={rippleEffect}
 					className='about__btn btn'>
