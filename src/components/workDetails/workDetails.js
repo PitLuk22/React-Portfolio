@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ProjectsState } from '../../projectsState';
 import * as S from './style';
 import { v4 as uuidv4 } from 'uuid';
+// Animation
+import { pageAnimation } from '../animation';
 
 const WorkDetails = ({ url }) => {
 
@@ -20,7 +22,7 @@ const WorkDetails = ({ url }) => {
 	const { head, mainImg, secondaryImg, awards } = project;
 
 	return (
-		<S.ProjectContainer>
+		<S.ProjectContainer variants={pageAnimation} exit='exit' initial='hidden' animate='show'>
 			<S.HeadLine>
 				<h2>{head}</h2>
 				<img src={mainImg} alt={head} />

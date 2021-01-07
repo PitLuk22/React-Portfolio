@@ -20,6 +20,15 @@ export const Image = styled.div`
 		object-fit: cover;
 	}
 `;
+
 export const Hide = styled.div`
-	/* overflow: hidden; */
+	overflow: hidden;
 `;
+
+// Wave
+export const WaveSvg = styled.svg`
+	position: absolute;
+	left:-20px;
+	z-index:-1;
+`;
+

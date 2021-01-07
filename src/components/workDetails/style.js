@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import { mainColor } from '../GlobalStyle';
-export const ProjectContainer = styled.div`
+// Animation
+import { motion } from 'framer-motion';
+
+export const ProjectContainer = styled(motion.div)`
 	max-height: 100vh;
 	width: 100%;
 	position: relative;

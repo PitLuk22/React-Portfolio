@@ -5,30 +5,46 @@ import * as S from './style';
 import athlete from '../../img/athlete-small.png';
 import theracer from '../../img/theracer-small.png';
 import goodtimes from '../../img/goodtimes-small.png';
-
+// Animation 
+import { motion } from 'framer-motion';
+import { colorFanContainer, colorFan, fade, increaseWidth, image } from '../animation';
 
 const Works = () => {
 	return (
 		<S.WorksContainer>
+
+			<motion.div variants={colorFanContainer}>
+				<S.Frame1 variants={colorFan} />
+				<S.Frame2 variants={colorFan} />
+				<S.Frame3 variants={colorFan} />
+				<S.Frame4 variants={colorFan} />
+			</motion.div>
+
 			<div className='work'>
-				<h2 className="title">Athlete</h2>
-				<div className="divider"></div>
+				<motion.h2 variants={fade}>Athlete</motion.h2>
+				<motion.div variants={increaseWidth} className="divider"></motion.div>
 				<Link to='/work/the-athlete'>
-					<img src={athlete} alt="athlete" />
+					<S.Hide>
+						<motion.img variants={image} src={athlete} alt="athlete" />
+					</S.Hide>
 				</Link>
 			</div>
 			<div className='work'>
-				<h2 className="title">The racer</h2>
-				<div className="divider"></div>
+				<motion.h2 variants={fade}>The racer</motion.h2>
+				<motion.div variants={increaseWidth} className="divider"></motion.div>
 				<Link to='/work/the-racer'>
-					<img src={theracer} alt="theracer" />
+					<S.Hide>
+						<motion.img variants={image} src={theracer} alt="theracer" />
+					</S.Hide>
 				</Link>
 			</div>
 			<div className='work'>
-				<h2 className="title">Good times</h2>
-				<div className="divider"></div>
+				<motion.h2 variants={fade}>Good times</motion.h2>
+				<motion.div variants={increaseWidth} className="divider"></motion.div>
 				<Link to='/work/good-times'>
-					<img src={goodtimes} alt="goodtimes" />
+					<S.Hide>
+						<motion.img variants={image} src={goodtimes} alt="goodtimes" />
+					</S.Hide>
 				</Link>
 			</div>
 		</S.WorksContainer>
