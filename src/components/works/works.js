@@ -8,8 +8,13 @@ import goodtimes from '../../img/goodtimes-small.png';
 // Animation 
 import { motion } from 'framer-motion';
 import { colorFanContainer, colorFan, fade, increaseWidth, image } from '../animation';
+import useScroll from '../useScroll';
 
 const Works = () => {
+
+	const [element, controls, view] = useScroll();
+	const [element2, controls2] = useScroll();
+	console.log(view);
 	return (
 		<S.WorksContainer>
 
@@ -20,16 +25,16 @@ const Works = () => {
 				<S.Frame4 variants={colorFan} />
 			</motion.div>
 
-			<div className='work'>
+			<div className='work' >
 				<motion.h2 variants={fade}>Athlete</motion.h2>
 				<motion.div variants={increaseWidth} className="divider"></motion.div>
 				<Link to='/work/the-athlete'>
 					<S.Hide>
-						<motion.img variants={image} src={athlete} alt="athlete" />
+						<motion.img variants={image} style={{ minHeight: '500px' }} src={athlete} alt="athlete" />
 					</S.Hide>
 				</Link>
 			</div>
-			<div className='work'>
+			<motion.div ref={element} animate={controls} initial='hidden' className='work'>
 				<motion.h2 variants={fade}>The racer</motion.h2>
 				<motion.div variants={increaseWidth} className="divider"></motion.div>
 				<Link to='/work/the-racer'>
@@ -37,8 +42,8 @@ const Works = () => {
 						<motion.img variants={image} src={theracer} alt="theracer" />
 					</S.Hide>
 				</Link>
-			</div>
-			<div className='work'>
+			</motion.div>
+			<motion.div ref={element2} animate={controls2} initial='hidden' className='work'>
 				<motion.h2 variants={fade}>Good times</motion.h2>
 				<motion.div variants={increaseWidth} className="divider"></motion.div>
 				<Link to='/work/good-times'>
@@ -46,7 +51,7 @@ const Works = () => {
 						<motion.img variants={image} src={goodtimes} alt="goodtimes" />
 					</S.Hide>
 				</Link>
-			</div>
+			</motion.div>
 		</S.WorksContainer>
 	)
 }

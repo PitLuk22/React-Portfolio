@@ -7,7 +7,7 @@ import { pageAnimation } from '../animation';
 
 const WorkDetails = ({ url }) => {
 
-	const [projects, setProjects] = useState(ProjectsState());
+	const [projects] = useState(ProjectsState());
 	const [project, setProject] = useState(null);
 
 	useEffect(() => {

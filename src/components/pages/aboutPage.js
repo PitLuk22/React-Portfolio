@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const AboutPage = () => {
 	return (
-		<motion.div variants={pageAnimation} exit='exit' initial='hidden' animate='show'>
+		<motion.div variants={pageAnimation} exit='exit' initial='hidden' animate='show' style={{ overflow: 'hidden' }}>
 			<AboutSection />
 			<ServicesSection />
 			<FaqSection />

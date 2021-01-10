@@ -4,7 +4,7 @@ export const pageAnimation = {
 	},
 	show: {
 		opacity: 1,
-		transition: { duration: .25, staggerChildren: 0.3, when: 'beforeChildren' },
+		transition: { duration: .25, staggerChildren: 0.3 },
 
 	},
 	exit: {
@@ -23,9 +23,10 @@ export const subtitle = {
 	hidden: { y: 200 },
 	show: { y: 0, transition: { ease: 'easeOut' } }
 }
+
 export const fade = {
 	hidden: { opacity: 0 },
-	show: { opacity: 1, transition: { duration: .75 } }
+	show: { opacity: 1, transition: { duration: .5 } }
 }
 
 export const image = {
@@ -57,3 +58,18 @@ export const tabs = {
 	show: { opacity: 1, transition: { duration: .7 } },
 	exit: { opacity: 0, transition: { duration: .2 } }
 }
+
+// Section scroll animate
+export const onScroll = {
+	hidden: { opacity: 0, scale: 0.9 },
+	show: { opacity: 1, scale: 1, transition: { duration: .5, ease: 'linear' } }
+}
+export const serviceScrollImg = {
+	hidden: { opacity: 0, x: '-50%', transition: { duration: .5 } },
+	show: { opacity: 1, x: '0%', transition: { duration: .5 } }
+}
+export const serviceScrollCards = {
+	hidden: { opacity: 0, x: '50%', transition: { duration: .5 } },
+	show: { opacity: 1, x: '0%', transition: { duration: .5 } }
+}
+

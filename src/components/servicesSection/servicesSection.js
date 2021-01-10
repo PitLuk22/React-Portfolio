@@ -7,14 +7,21 @@ import money from '../../img/money.svg';
 import teamwork from '../../img/teamwork.svg';
 // Styles
 import * as S from './style';
+//Animation
+import { serviceScrollImg, serviceScrollCards } from '../animation';
+import useScroll from '../useScroll';
 
 const ServicesSection = () => {
+
+	// Scrolling animation
+	const [element, controls] = useScroll();
+
 	return (
-		<S.Service>
-			<S.Image>
+		<S.Service ref={element}>
+			<S.Image variants={serviceScrollImg} animate={controls} initial='hidden'>
 				<img src={servicesImg} alt="services" />
 			</S.Image>
-			<S.Description>
+			<S.Description variants={serviceScrollCards} animate={controls} initial='hidden'>
 				<div className="descr__title">
 					<h2>High <span>quality</span> service.</h2>
 				</div>

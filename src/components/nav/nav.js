@@ -1,23 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // Styles
 import * as S from './style';
 
 const Nav = () => {
+
+	const location = useLocation();
+	const setActiveClass = (selectedLink) => {
+		return selectedLink === location.pathname ? 'active' : '';
+	}
+
 	return (
 		<S.Nav>
-			<Link to="/">
-				<S.Logo>Portfolio</S.Logo>
-			</Link>
+			<S.Logo>Portfolio</S.Logo>
 			<ul>
 				<li>
-					<Link to="/">About</Link>
+					<Link to="/" className={setActiveClass('/')}>About</Link>
 				</li>
 				<li>
-					<Link to="/work">Works</Link>
+					<Link to="/work" className={setActiveClass('/work')}>Works</Link>
 				</li>
 				<li>
-					<Link to="/contacts">Contacts</Link>
+					<Link to="/contacts" className={setActiveClass('/contacts')}>Contacts</Link>
 				</li>
 			</ul>
 		</S.Nav>

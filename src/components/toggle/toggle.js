@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { mainColor } from '../GlobalStyle';
 const Toggle = ({ title, children }) => {
 
-	const [toggle, setToggle] = useState(true);
+	const [toggle, setToggle] = useState(false);
 	const activeTab = toggle ? mainColor : '#fff'
 		; return (
 			<S.ToggleDiv layout onClick={() => setToggle(!toggle)}>

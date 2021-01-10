@@ -3,13 +3,17 @@ import React from 'react';
 import * as S from './style';
 // Animation
 import { AnimateSharedLayout } from "framer-motion";
-import { tabs } from '../animation';
+import { tabs, onScroll } from '../animation';
+import useScroll from '../useScroll';
 // Components
 import Toggle from '../toggle';
 
 const FaqSection = () => {
+
+	const [element, controls] = useScroll();
+
 	return (
-		<S.Faq>
+		<S.Faq ref={element} variants={onScroll} initial='hidden' animate={controls}>
 			<div className="faq__title">
 				<h2>
 					Any questions?
