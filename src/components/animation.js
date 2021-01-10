@@ -21,7 +21,7 @@ export const title = {
 
 export const subtitle = {
 	hidden: { y: 200 },
-	show: { y: 0 }
+	show: { y: 0, transition: { ease: 'easeOut' } }
 }
 export const fade = {
 	hidden: { opacity: 0 },
@@ -50,4 +50,10 @@ export const colorFanContainer = {
 export const colorFan = {
 	hidden: { x: '-130%', skew: '50deg', },
 	show: { x: '100%', skew: '0deg', transition: { ease: 'easeOut', duration: .8 } }
+}
+
+export const tabs = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1, transition: { duration: .7 } },
+	exit: { opacity: 0, transition: { duration: .2 } }
 }

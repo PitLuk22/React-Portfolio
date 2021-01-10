@@ -1,35 +1,20 @@
 import styled from 'styled-components';
 import { About } from '../aboutSection/style';
+import { motion } from 'framer-motion';
 
 export const Faq = styled(About)`
 	padding-top:0 ;
 	display: block;
 	.faq__title {
-		padding-bottom: 2rem;
 		span {
 			display: block;
 		}
 	}
-	
 `;
 
-export const Question = styled.div`
-	padding: 3rem 0;
-	cursor: pointer;
-	h4 {
-		font-size: 2rem;
-		font-weight: lighter;
-	}
-	.answer {
-		padding: 2rem 0;
-	}
+export const Answer = styled(motion.div)`
+	padding-bottom: 3rem;
 	p {
-		padding: 1rem 0;
-	}
-	.faq-line {
-		height: 4px;
-		width: 100%;
-		background-color: #fff;
-		border-radius: 5px;
+		padding: .5rem 0;
 	}
 `;
