@@ -7,7 +7,7 @@ import home from '../../img/home1.png';
 import * as S from './style';
 // Animation
 import { motion } from 'framer-motion';
-import { title, subtitle, fade, image, fromLeftToRight } from '../animation';
+import { title, subtitle, image, fromLeftToRight } from '../animation';
 const aboutSection = () => {
 
 	const rippleEffect = (event) => {
