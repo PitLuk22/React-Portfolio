@@ -5,23 +5,33 @@ import * as S from './style';
 
 const Nav = () => {
 
-	const location = useLocation();
-	const setActiveClass = (selectedLink) => {
-		return selectedLink === location.pathname ? 'active' : '';
-	}
+	const { pathname } = useLocation();
+	const getWidth = (path) => pathname === path ? '100%' : '0%';
 
 	return (
 		<S.Nav>
 			<S.Logo>Portfolio</S.Logo>
 			<ul>
 				<li>
-					<Link to="/" className={setActiveClass('/')}>About</Link>
+					<Link to="/">About</Link>
+					<S.Line
+						transition={{ duration: 0.5 }}
+						initial={{ width: '0%' }}
+						animate={{ width: getWidth('/') }} />
 				</li>
 				<li>
-					<Link to="/work" className={setActiveClass('/work')}>Works</Link>
+					<Link to="/work">Works</Link>
+					<S.Line
+						transition={{ duration: 0.5 }}
+						initial={{ width: '0%' }}
+						animate={{ width: getWidth('/work') }} />
 				</li>
 				<li>
-					<Link to="/contacts" className={setActiveClass('/contacts')}>Contacts</Link>
+					<Link to="/contacts">Contacts</Link>
+					<S.Line
+						transition={{ duration: 0.5 }}
+						initial={{ width: '0%' }}
+						animate={{ width: getWidth('/contacts') }} />
 				</li>
 			</ul>
 		</S.Nav>

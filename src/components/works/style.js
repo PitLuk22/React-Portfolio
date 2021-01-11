@@ -8,6 +8,9 @@ export const WorksContainer = styled.div`
 	min-height: 100vh;
 	padding: 2rem 10rem;
 	overflow: hidden;
+	@media(max-width: 1300px) {
+		padding:3rem;
+	}
 	.work {
 		margin-bottom: 3rem;
 	}

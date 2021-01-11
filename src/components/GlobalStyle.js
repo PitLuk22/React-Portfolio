@@ -8,6 +8,14 @@ export const GlobalStyle = createGlobalStyle`
 		padding:0;
 		box-sizing:border-box;
 	}
+	html {
+		@media (max-width: 1700px) {
+			font-size: 80%;
+		}
+		@media(max-width: 700px) {
+			font-size: 60%;
+		}
+	}
 	body {
 		background: #1A2026;
 		font-family: 'Inter', sans-serif;
@@ -57,7 +65,7 @@ export const GlobalStyle = createGlobalStyle`
 	}
 	p {
 		padding: 3rem 0rem;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		line-height: 150%;
 		color: #ccc;
 	}

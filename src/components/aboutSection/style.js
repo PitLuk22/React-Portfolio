@@ -8,14 +8,27 @@ export const About = styled(motion.div)`
 	align-items: center;
 	padding: 5rem 10rem;
 	color: #fff;
+	@media(max-width: 1300px) {
+		flex-direction: column;
+		text-align: center;
+	}
+	@media(max-width: 700px) {
+		padding: 3rem 3rem;
+	}
 `;
 export const Descr = styled(motion.div)`
 	padding-right: 5rem;
+	@media(max-width: 1300px) {
+		padding: 0 0 4rem 0;
+		p {
+			padding: 2rem 0 2rem 0;
+		}
+	}
 `;
 export const Image = styled(motion.div)`
 	overflow: hidden;
 	img {
-		width: 32vw;
+		width: 100%;
 		height: 80vh;
 		object-fit: cover;
 	}

@@ -9,6 +9,9 @@ export const Service = styled(About)`
 		width: 70%;
 		padding: 2rem 0 4rem 0;
 	}
+	@media(max-width: 1300px) {
+		flex-direction: column-reverse;
+	}
 `;
 export const Description = styled(Descr)`
 	padding-left: 5rem;
@@ -18,6 +21,10 @@ export const Description = styled(Descr)`
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	@media(max-width: 1300px) {
+		padding: 0;
+		width: 80%;
+	}
 `;
 
 export const Cards = styled.div`
@@ -27,10 +34,22 @@ export const Cards = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 3rem 0 0 0;
+	@media(max-width: 1300px) {
+		justify-content: space-around;
+		padding: 3rem 0 3rem 0;
+	}
+	@media(max-width: 490px) {
+		justify-content: center;
+	}
 `;
 export const Card = styled.div`
 	flex-basis: 18rem;
-
+	@media(max-width: 1300px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	.card__img {
 		display: flex;
 		justify-content: flex-start;

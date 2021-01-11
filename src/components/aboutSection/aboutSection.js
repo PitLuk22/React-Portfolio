@@ -7,7 +7,7 @@ import home from '../../img/home1.png';
 import * as S from './style';
 // Animation
 import { motion } from 'framer-motion';
-import { title, subtitle, fade, image } from '../animation';
+import { title, subtitle, fade, image, fromLeftToRight } from '../animation';
 const aboutSection = () => {
 
 	const rippleEffect = (event) => {
@@ -44,7 +44,8 @@ const aboutSection = () => {
 					</S.Hide>
 				</motion.div>
 				<motion.button
-					variants={fade}
+					variants={fromLeftToRight}
+					transition={{ duration: .1 }}
 					onClick={rippleEffect}
 					className='about__btn btn'>
 					<b>Contact Us</b>

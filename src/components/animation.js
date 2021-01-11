@@ -37,6 +37,10 @@ export const fade = {
 	hidden: { opacity: 0 },
 	show: { opacity: 1, transition: { duration: .5 } }
 }
+export const fadeDelay = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1, transition: { duration: .5, delay: 1 } }
+}
 
 export const image = {
 	hidden: { opacity: 0, scale: 1.5 },
@@ -50,6 +54,11 @@ export const image = {
 export const increaseWidth = {
 	hidden: { width: '0%' },
 	show: { width: '100%', transition: { duration: 1 } }
+}
+
+export const increaseWidthDelay = {
+	hidden: { width: '0%' },
+	show: { width: '100%', transition: { duration: 1, delay: 1 } }
 }
 
 // ColorFan 
@@ -82,3 +91,8 @@ export const serviceScrollCards = {
 	show: { opacity: 1, x: '0%', transition: { duration: .5 } }
 }
 
+// Contacts Section corner
+export const corner = {
+	hidden: { rotate: '-30deg', bottom: -2000, right: -400 },
+	show: { rotate: '-25deg', bottom: -1000, right: -400, transition: { ease: 'linear' } }
+}

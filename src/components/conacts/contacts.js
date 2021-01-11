@@ -3,7 +3,7 @@ import React from 'react'
 import * as S from './style';
 // Animation
 import { motion } from 'framer-motion';
-import { title, subtitle, fromLeftToRight, block } from '../animation';
+import { title, subtitle, fromLeftToRight, block, corner } from '../animation';
 // FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -36,6 +36,7 @@ const Contacts = () => {
 						<motion.h3 variants={title}>Social media</motion.h3>
 					</S.Block>
 				</div>
+				<S.Frame variants={corner} />
 			</S.ContactsContainer>
 		</>
 	)

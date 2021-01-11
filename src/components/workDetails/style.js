@@ -11,12 +11,25 @@ export const ProjectContainer = styled(motion.div)`
 export const HeadLine = styled.div`
 	h2 {
 		position: absolute;
+		bottom: 0;
 		bottom: 40%;
 		left: 50%;
 		transform: translate(-50%, -40%);
 		z-index: 2;
 		font-size: 5rem;
-		text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);	}
+		text-shadow: 4px 4px 3px rgba(0, 0, 0, 1);	
+		text-align: center;
+		@media (max-width: 700px) {
+			bottom: 60%;
+			left: 50%;
+			transform: translate(-50%, -60%);
+		}
+		@media (max-width: 400px) {
+			bottom: 70%;
+			left: 50%;
+			transform: translate(-50%, -70%);
+		}
+	}
 	img {
 		width: 100%;
 		max-height: 70vh;
@@ -27,16 +40,20 @@ export const HeadLine = styled.div`
 export const Description = styled.div`
 	min-height: 80vh;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	flex-wrap:wrap;
+	flex-wrap: wrap;
+	margin: 5rem 10rem;
 `;
 
 export const Card = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 350px;
-	margin: 4rem;
+	padding: 3rem;
+	@media (max-width: 960px) {
+		padding: 1rem;
+	}
 	h3 {
 		font-size: 1.5rem;
 	}
@@ -52,7 +69,7 @@ export const Card = styled.div`
 	}
 `;
 export const ImageDispaly = styled.div`
-	min-height: 80vh;
+	/* min-height: 80vh; */
 	img {
 		width: 100%;
 

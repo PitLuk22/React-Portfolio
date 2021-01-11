@@ -5,6 +5,10 @@ import { motion } from 'framer-motion';
 export const Faq = styled(About)`
 	padding-top:0 ;
 	display: block;
+	@media(max-width: 1300px) {
+		padding-top: 3rem;
+		text-align: left;
+	}
 	.faq__title {
 		span {
 			display: block;
