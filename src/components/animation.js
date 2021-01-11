@@ -14,8 +14,17 @@ export const pageAnimation = {
 	}
 }
 
+export const block = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1 }
+}
+
 export const title = {
 	hidden: { opacity: 0, x: 100 },
+	show: { opacity: 1, x: 0, }
+}
+export const fromLeftToRight = {
+	hidden: { opacity: 0, x: -100 },
 	show: { opacity: 1, x: 0, }
 }
 

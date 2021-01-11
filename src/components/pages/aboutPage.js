@@ -2,6 +2,7 @@ import React from 'react'
 import AboutSection from '../aboutSection';
 import ServicesSection from '../servicesSection';
 import FaqSection from '../faqSection';
+import ScrollTop from '../scrollTop';
 // Animation
 import { pageAnimation } from '../animation';
 import { motion } from 'framer-motion';
@@ -12,6 +13,7 @@ const AboutPage = () => {
 			<AboutSection />
 			<ServicesSection />
 			<FaqSection />
+			<ScrollTop />
 		</motion.div>
 	)
 }

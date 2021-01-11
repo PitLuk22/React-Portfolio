@@ -3,6 +3,8 @@ import Works from '../works';
 // Animation
 import { pageAnimation } from '../animation';
 import { motion } from 'framer-motion';
+// Components 
+import ScrollTop from '../scrollTop';
 
 const WorksPage = () => {
 	return (
@@ -13,6 +15,7 @@ const WorksPage = () => {
 			initial='hidden'
 			animate='show'>
 			<Works />
+			<ScrollTop />
 		</motion.div>
 	)
 }

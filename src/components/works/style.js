@@ -30,7 +30,7 @@ export const WorksContainer = styled.div`
 
 export const Frame1 = styled(motion.div)`
 	position: fixed;
-	top: 0;
+	top: 80px;
 	left: 0;
 	width:150%;
 	height: 150vh; 

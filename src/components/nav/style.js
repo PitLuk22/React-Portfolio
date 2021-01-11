@@ -2,16 +2,17 @@ import styled from 'styled-components';
 import { mainColor } from '../GlobalStyle';
 
 export const Nav = styled.nav`
-	position: relative;
+	position: sticky;
+	top:0;
 	min-height: 80px;
 	width: 100%;
-	background-color: #131313;
+	background-color: #010101;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	color: #fff;
 	padding: 0 10rem;
-	z-index: 1000;
+	z-index: 10;
 	a {
 		text-decoration: none;
 	}
